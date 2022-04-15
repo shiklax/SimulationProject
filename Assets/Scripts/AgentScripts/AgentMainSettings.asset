@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec2989f3ec6f5024ba3ee703ee5448b6, type: 3}
   m_Name: AgentMainSettings
   m_EditorClassIdentifier: 
-  speed: 3.5
+  speed: 3
   angularSpeed: 120
   acceleration: 8
   lifePoints: 3

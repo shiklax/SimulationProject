@@ -16,9 +16,7 @@ public class AgentSpawnerScript : MonoBehaviour {
     private GameManagerScript gameManagerScript;
     [HideInInspector]
     public string cloneID;
-
     private void Update() {
-        //Debug.Log(AgentsList.Length);
         if (ShouldSpawn() && gameManagerScript.AgentsList.Count < spawnCap) {
             cloneID = Guid.NewGuid().ToString();
             SpawnAgent();

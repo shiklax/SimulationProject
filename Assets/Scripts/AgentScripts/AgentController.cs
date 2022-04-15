@@ -3,11 +3,15 @@ using UnityEngine.AI;
 public class AgentController : MonoBehaviour {
     private NavMeshAgent navMeshAgent;
     public AgentSettings settings;
-    public Camera cam;
     private GameManagerScript gameManagerScript;
     private Bounds floorBounds;
     private Vector3 randomDestination;
     private int lifePoints;
+    public bool isDead;
+
+
+
+
     private void Start() {
         gameManagerScript = GameObject.Find("Managers/GameManager").GetComponent<GameManagerScript>();
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -27,6 +31,7 @@ public class AgentController : MonoBehaviour {
         if (lifePoints == 0) {
             string tempName = this.gameObject.name;
             gameManagerScript.AgentsList.Remove(tempName.Substring(0, tempName.Length - 7));
+            gameManagerScript.currentClickedOnAnObjectName = string.Empty;
             Destroy(this.gameObject);
         }
         if (!navMeshAgent.pathPending && !navMeshAgent.hasPath && lifePoints != 0) {
@@ -37,6 +42,7 @@ public class AgentController : MonoBehaviour {
         if (other.gameObject.CompareTag("Agent")) {
 
             lifePoints -= 1;
+            navMeshAgent.ResetPath();
         }
     }
 }
