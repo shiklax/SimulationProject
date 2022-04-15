@@ -13,7 +13,7 @@ public class GameManagerScript : MonoBehaviour {
     public bool ClickedOnAnObjectState;
 
     public string currentClickedOnAnObjectName;
-
+    public int currentClickedAgentLifePoints;
 
     void Start() {
         ClickedOnAnObjectState = false;

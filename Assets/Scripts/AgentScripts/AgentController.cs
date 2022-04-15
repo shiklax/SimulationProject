@@ -6,7 +6,7 @@ public class AgentController : MonoBehaviour {
     private GameManagerScript gameManagerScript;
     private Bounds floorBounds;
     private Vector3 randomDestination;
-    private int lifePoints;
+    public int lifePoints;
     public bool isDead;
 
 
@@ -30,9 +30,13 @@ public class AgentController : MonoBehaviour {
         navMeshAgent.acceleration = settings.acceleration;
         if (lifePoints == 0) {
             string tempName = this.gameObject.name;
+            if (tempName.Substring(0, tempName.Length - 7) == gameManagerScript.currentClickedOnAnObjectName) {
+                gameManagerScript.currentClickedAgentLifePoints = 0;
+            }
+
             gameManagerScript.AgentsList.Remove(tempName.Substring(0, tempName.Length - 7));
-            gameManagerScript.currentClickedOnAnObjectName = string.Empty;
             Destroy(this.gameObject);
+
         }
         if (!navMeshAgent.pathPending && !navMeshAgent.hasPath && lifePoints != 0) {
             SetRandomDestination();
@@ -40,7 +44,6 @@ public class AgentController : MonoBehaviour {
     }
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Agent")) {
-
             lifePoints -= 1;
             navMeshAgent.ResetPath();
         }
