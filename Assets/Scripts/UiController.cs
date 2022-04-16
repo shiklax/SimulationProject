@@ -64,6 +64,7 @@ public class UiController : MonoBehaviour {
             }
             backGround.visible = true;
             fizzBuzzUI.mainContainer.visible = false;
+            fizzBuzzUI.fizzBuzzContainer.visible = false;
         } else {
             fizzBuzzUI.mainContainer.visible = true;
             backGround.visible = false;

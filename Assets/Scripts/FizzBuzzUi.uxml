@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="/Assets/fizz-buzz-label-style.uss" />
-    <ui:VisualElement name="MainContainer" style="width: 724px; height: 407px; flex-direction: row;">
+    <ui:VisualElement name="MainContainer" style="width: 724px; height: 407px; flex-direction: row; display: flex;">
         <ui:Button display-tooltip-when-elided="true" name="ShowFizzBuzzButton" style="width: 50px; height: 25px; background-color: rgb(188, 188, 188);" />
         <ui:VisualElement name="FizzBuzzContainer" class="FizzBuzzLabel" style="height: 120px; width: auto; flex-direction: column-reverse; align-items: flex-start; justify-content: flex-end; -unity-text-outline-color: rgb(255, 252, 0); background-color: rgb(207, 203, 120);">
             <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1" show-vertical-scroller="false" show-horizontal-scroller="false" touch-scroll-type="Elastic" style="height: auto;">
