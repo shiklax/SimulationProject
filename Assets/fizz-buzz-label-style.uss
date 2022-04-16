@@ -1,0 +1,4 @@
+.FizzBuzzLabelStyle {
+    width: 80px;
+    display: flex;
+}

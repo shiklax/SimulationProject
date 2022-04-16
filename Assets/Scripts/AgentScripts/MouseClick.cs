@@ -60,6 +60,6 @@ public class MouseClick : MonoBehaviour {
     private void OnDestroy() {
         if (isObjectClicked == true)
             ClickedOffState();
-        Debug.Log("Destroyed:" + gameObject.name);
+        //Debug.Log("Destroyed:" + gameObject.name);
     }
 }

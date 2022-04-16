@@ -4918,7 +4918,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings: {fileID: 11400000, guid: 2f006378b155c1c4a93f50935c2df20a, type: 2}
   lifePoints: 0
-  isDead: 0
 --- !u!114 &2641102306416364379
 MonoBehaviour:
   m_ObjectHideFlags: 0

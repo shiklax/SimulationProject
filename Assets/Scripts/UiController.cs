@@ -8,14 +8,17 @@ public class UiController : MonoBehaviour {
     public VisualElement rightPopUp;
     public VisualElement backGround;
     public Label agentNameLabel;
-
     public Label currentPosition;
     public Label destination;
+
+    public FizzBuzzUIController fizzBuzzUI;
+
 
 
     public GameManagerScript gameManagerScript;
     private void Start() {
         var root = GetComponent<UIDocument>().rootVisualElement;
+        fizzBuzzUI = GameObject.Find("UIDocumentFizzBuzz").GetComponent<FizzBuzzUIController>();
         gameManagerScript = GameObject.Find("Managers/GameManager").GetComponent<GameManagerScript>();
         agentNameLabel = root.Q<Label>("AgentName");
         currentPosition = root.Q<Label>("CurrentPosition");
@@ -60,7 +63,9 @@ public class UiController : MonoBehaviour {
                     break;
             }
             backGround.visible = true;
+            fizzBuzzUI.mainContainer.visible = false;
         } else {
+            fizzBuzzUI.mainContainer.visible = true;
             backGround.visible = false;
             heartImage2.visible = false;
             heartImage1.visible = false;

@@ -7,7 +7,6 @@ public class AgentController : MonoBehaviour {
     private Bounds floorBounds;
     private Vector3 randomDestination;
     public int lifePoints;
-    public bool isDead;
     private void Start() {
         gameManagerScript = GameObject.Find("Managers/GameManager").GetComponent<GameManagerScript>();
         navMeshAgent = GetComponent<NavMeshAgent>();
