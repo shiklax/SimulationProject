@@ -8,11 +8,18 @@ public class UiController : MonoBehaviour {
     public VisualElement rightPopUp;
     public VisualElement backGround;
     public Label agentNameLabel;
+
+    public Label currentPosition;
+    public Label destination;
+
+
     public GameManagerScript gameManagerScript;
     private void Start() {
         var root = GetComponent<UIDocument>().rootVisualElement;
         gameManagerScript = GameObject.Find("Managers/GameManager").GetComponent<GameManagerScript>();
         agentNameLabel = root.Q<Label>("AgentName");
+        currentPosition = root.Q<Label>("CurrentPosition");
+        destination = root.Q<Label>("Destination");
         heartImage0 = root.Q<VisualElement>("HeartImage0");
         heartImage1 = root.Q<VisualElement>("HeartImage1");
         heartImage2 = root.Q<VisualElement>("HeartImage2");
@@ -21,6 +28,9 @@ public class UiController : MonoBehaviour {
     }
     private void Update() {
         agentNameLabel.text = gameManagerScript.currentClickedOnAnObjectName;
+        currentPosition.text = gameManagerScript.currentClickedAgentCurrentPosition.ToString();
+        destination.text = gameManagerScript.currentClickedAgentDestination.ToString();
+
         UiHandler();
     }
     void UiHandler() {

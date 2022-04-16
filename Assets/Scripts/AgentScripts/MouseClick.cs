@@ -57,4 +57,9 @@ public class MouseClick : MonoBehaviour {
     private void UpdateCamOrthoSize(float value) {
         cam.orthographicSize = value;
     }
+    private void OnDestroy() {
+        if (isObjectClicked == true)
+            ClickedOffState();
+        Debug.Log("Destroyed:" + gameObject.name);
+    }
 }

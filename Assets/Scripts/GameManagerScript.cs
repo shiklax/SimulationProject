@@ -11,17 +11,13 @@ public class GameManagerScript : MonoBehaviour {
     [SerializeField]
     public float cameraTweenTimeOut = 0.5f;
     public bool ClickedOnAnObjectState;
-
     public string currentClickedOnAnObjectName;
     public int currentClickedAgentLifePoints;
-
+    [HideInInspector]
+    public Vector3 currentClickedAgentCurrentPosition;
+    [HideInInspector]
+    public Vector3 currentClickedAgentDestination;
     void Start() {
         ClickedOnAnObjectState = false;
     }
-
-    private void Update() {
-    }
-
-
-
 }

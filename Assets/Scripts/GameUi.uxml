@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="/Assets/return-button-style.uss" />
-    <ui:VisualElement name="Background" focusable="false" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.33); align-items: flex-end; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; justify-content: center; display: flex; visibility: visible; overflow: visible;">
+    <ui:VisualElement name="Background" focusable="false" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.45); align-items: flex-end; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; justify-content: center; display: flex; visibility: visible; overflow: visible;">
         <ui:VisualElement name="RightPopUp" style="height: 500px; width: 300px; background-color: rgb(106, 56, 31); align-items: flex-start; justify-content: flex-start; flex-direction: column; border-top-left-radius: 20px; border-bottom-left-radius: 20px; border-top-right-radius: 0; border-bottom-right-radius: 0; border-top-width: 0; left: auto;">
             <ui:VisualElement name="NameContentBox" style="width: 300px; height: 100px; max-width: none; align-items: stretch; justify-content: space-between; flex-direction: column;">
                 <ui:Label text="Name" display-tooltip-when-elided="true" name="LabelName" style="height: 50px; width: 300px; font-size: 20px; -unity-text-align: middle-center; white-space: nowrap;" />
@@ -15,13 +15,25 @@
                     <ui:VisualElement name="HeartImage1" style="background-color: rgb(255, 0, 0); width: 80px; height: 80px; border-left-width: 10px; border-right-width: 10px; border-top-width: 10px; border-bottom-width: 10px; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" />
                     <ui:VisualElement name="HeartImage2" style="background-color: rgb(255, 0, 0); width: 80px; height: 80px; border-left-width: 10px; border-right-width: 10px; border-top-width: 10px; border-bottom-width: 10px; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" />
                 </ui:VisualElement>
-                <ui:VisualElement name="EmptyElement" style="height: 50px; width: 300px; flex-direction: row;" />
+                <ui:VisualElement name="EmptyElement1" style="height: 50px; width: 300px; flex-direction: row; align-items: center; justify-content: center;" />
             </ui:VisualElement>
             <ui:VisualElement name="MiscContentBox" style="height: 200px; width: 300px; flex-direction: column;">
                 <ui:VisualElement name="Misc" style="height: 50px; width: 300px; flex-direction: row; align-items: center; justify-content: space-around;">
-                    <ui:Label text="Misc" display-tooltip-when-elided="true" name="MiscText" style="-unity-text-align: middle-center; white-space: nowrap; font-size: 20px;" />
+                    <ui:Label text="Position" display-tooltip-when-elided="true" style="font-size: 20px;" />
                 </ui:VisualElement>
-                <ui:VisualElement name="BigContainer" style="height: 100px; width: 300px; flex-direction: row;" />
+                <ui:VisualElement name="BigContainer" style="height: 100px; width: 300px; flex-direction: column; align-items: center;">
+                    <ui:VisualElement name="PostionsContainer" style="height: 50px; width: 300px; flex-direction: row; align-items: stretch; justify-content: flex-start;">
+                        <ui:VisualElement name="CurrentPositionContainer" style="width: 150px; height: 50px; align-items: center; justify-content: space-around;">
+                            <ui:Label text="Current Position" display-tooltip-when-elided="true" name="CurrentPositionLabelName" />
+                            <ui:Label text="loremipsum" display-tooltip-when-elided="true" name="CurrentPosition" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="DestinationContainer" style="width: 150px; height: 50px; align-items: center; justify-content: space-around;">
+                            <ui:Label text="Destination" display-tooltip-when-elided="true" name="DestinationLabelName" />
+                            <ui:Label text="loremipsum" display-tooltip-when-elided="true" name="Destination" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="EmptyElement2" style="height: 50px; width: 300px; flex-direction: row;" />
+                </ui:VisualElement>
                 <ui:VisualElement name="Footer" style="height: 50px; width: 300px; flex-direction: row-reverse;">
                     <ui:Label text="by Radosław Matusiak 2022" display-tooltip-when-elided="true" />
                 </ui:VisualElement>
